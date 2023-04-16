@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+body{
+    display:grid;
+    background-color: #edeef6;
+}
+
+.containerh{
+    margin: 0 0 1rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gugi', cursive;
+    color: white;
+    background-color: rgb(42, 42, 45) !important;
+}
+
+
+#div1{
+    padding: 2rem;
+    align-items: center;
+}
+
+#contenedor-principal {
+    position: relative;
+}
+
+#imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* establece un z-index menor que el de la imagen superpuesta */
+}
+
+#deve_super {
+    position: absolute;
+    top: 390px;
+    left: 305px;
+    z-index: 2;
+}
+#deve_super2 {
+    position: absolute;
+    top: 390px;
+    left: 305px;
+    z-index: 2;
+}
+#deve_super3 {
+    position: absolute;
+    top: 390px;
+    left: 305px;
+    z-index: 2;
+}
+#deve_super4 {
+    position: absolute;
+    top: 390px;
+    left: 305px;
+    z-index: 2;
+}
+#deve_super5 {
+    position: absolute;
+    top: 390px;
+    left: 305px;
+    z-index: 2;
+}
+#deve_super6 {
+    position: absolute;
+    top: 390px;
+    left: 305px;
+    z-index: 2;
+}
+
+#imagen-superpuesta {
+    position: absolute;
+    top: 20px;
+    left: 1270px;
+    z-index: 2; /* establece un z-index mayor que el de la imagen de fondo */
+}
+
+.botonimgdado{
+    background-image: url(img/1.svg);
+    width: 80pt;
+    height: 80pt;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#tabla{
+    position: absolute;
+    top: 180px;
+    left:400px;
+    z-index: 2;
+    font-size: 9px;
+    border: 1px solid black;
+}
+
+#box1{
+    position: absolute;
+    top: 450px;
+    left: 450px;
+    z-index: 2;
+}

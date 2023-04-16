@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measuring the Technical Debt</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        table th,td {
+            border: 1px solid black;
+        }
+    </style>
+    <div class="containerh">
+        <h1 id = "Titulo">Measuring the Technical Debt</h1>
+    </div>
+    
+</head>
+<body>
+
+    <div id="div1">
+        <div id="contenedor-principal">
+            <div >
+                <img id="imagen-fondo" src="Tablero.PNG" width="1430" height="700">
+            </div>
+            <div id="deve_super6">
+                <img src="img/Developer6.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="deve_super5">
+                <img src="img/Developer5.PNG" width="75" height="67" draggable="true"  ondragstart="drag(event)">
+            </div>
+            <div id="deve_super4">
+                <img src="img/Developer4.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="deve_super3">
+                <img src="img/Developer3.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="deve_super2">
+                <img src="img/Developer2.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="deve_super">
+                <img src="img/Developer1.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="imagen-superpuesta">
+                <button class="botonimgdado" onclick="dado()">
+                    <img src="/img/1.svg" class="img1" width="70" onclick="dado()">
+                </button>
+            </div>
+
+            <div id="tabla">
+                <table style="width: 650px;">
+                    <thead>
+                        <tr>
+                            <th>Initial Data</th>
+                            <th>Developer 1</th>
+                            <th>Developer 2</th>
+                            <th>Developer 3</th>
+                            <th>Developer 4</th>
+                            <th>Developer 5</th>
+                            <th>Developer 6</th>                  
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fan Out</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> 
+                        </tr>
+                        <tr>
+                            <td>Fan In</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Number of Components</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Edges</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Nodes</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Identifier</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Shared Data Structure</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Shared Data Parameter</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Technical Debt</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>                            
+                        </tr> 
+                        <tr>
+                            <th>Changing Data</th>
+                            <th>Developer 1</th>
+                            <th>Developer 2</th>
+                            <th>Developer 3</th>
+                            <th>Developer 4</th>
+                            <th>Developer 5</th>
+                            <th>Developer 6</th>                 
+                        </tr>
+                        <tr>
+                            <td>Fan Out</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Fan In</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Components</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Edges</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Nodes</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Identifier</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Shared Data Structure</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Shared Data Parameter</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>                            
+                        </tr>
+                        <tr>
+                            <th>Technical Debt</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>                            
+                        </tr>  
+                    </tbody>                    
+                </table>          
+            </div>
+
+            <div id="box1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+            
+        </div> 
+    </div>
+</body>
+<script src = "main.js"></script>
+</html>
