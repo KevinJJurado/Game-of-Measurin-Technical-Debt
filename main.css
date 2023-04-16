@@ -99,7 +99,19 @@ body{
 
 #box1{
     position: absolute;
-    top: 450px;
-    left: 450px;
+    top: 500px;
+    left: 340px;
     z-index: 2;
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+}
+#box2{
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    z-index: 2;
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
 }

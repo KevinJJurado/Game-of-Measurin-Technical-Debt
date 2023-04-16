@@ -13,7 +13,7 @@ function dado(){
 
 // lo que sucede cuando se arrastra un elemnto
 function drag(event){
-    //Guardar el i del elemto arrastrado
+    //Guardar el id del elemto arrastrado
     event.dataTrasnfer.setData("text",ev.target.id);
 }
 

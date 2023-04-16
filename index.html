@@ -19,34 +19,79 @@
 </head>
 <body>
 
-    <div id="div1">
+    <div id="div1">  
         <div id="contenedor-principal">
             <div >
                 <img id="imagen-fondo" src="Tablero.PNG" width="1430" height="700">
             </div>
             <div id="deve_super6">
-                <img src="img/Developer6.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+                <img id="dev6" src="img/Developer6.PNG" width="75" height="67" draggable="true">
             </div>
             <div id="deve_super5">
-                <img src="img/Developer5.PNG" width="75" height="67" draggable="true"  ondragstart="drag(event)">
+                <img id="dev5" src="img/Developer5.PNG" width="75" height="67" draggable="true">
             </div>
             <div id="deve_super4">
-                <img src="img/Developer4.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+                <img id="dev4" src="img/Developer4.PNG" width="75" height="67" draggable="true">
             </div>
             <div id="deve_super3">
-                <img src="img/Developer3.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+                <img id="dev3" src="img/Developer3.PNG" width="75" height="67" draggable="true">
             </div>
             <div id="deve_super2">
-                <img src="img/Developer2.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+                <img id="dev2" src="img/Developer2.PNG" width="75" height="67" draggable="true">
             </div>
-            <div id="deve_super">
-                <img src="img/Developer1.PNG" width="75" height="67" draggable="true" ondragstart="drag(event)">
+            <div id="deve_super" >
+                <img id="dev1" src="img/Developer1.PNG" width="75" height="67" draggable="true">
             </div>
             <div id="imagen-superpuesta">
                 <button class="botonimgdado" onclick="dado()">
-                    <img src="/img/1.svg" class="img1" width="70" onclick="dado()">
+                    <img src="img/1.svg" class="img1" width="70" onclick="dado()">
                 </button>
             </div>
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <script>
+                
+                /*ondrop="drop(event)" ondragover="allowDrop(event)"*/
+
+                const dev1 = document.querySelector('#dev1');
+                const dev2 = document.querySelector('#dev2');
+                /*dev1.addEventListener('dragstart',e=>{
+                    console.log('Drag Start');
+                });
+                dev1.addEventListener('dragend',e=>{
+                    console.log('Drag End');
+                });
+                dev1.addEventListener('drag',e=>{
+                    console.log('Drag');
+                });*/
+
+                const box1 = document.querySelector('#box1');                
+                /*box1.addEventListener('dragenter',e=>{
+                    console.log('Drag Enter');
+                });
+                box1.addEventListener('dragleave',e=>{
+                    console.log('Drag Leave');
+                });*/
+                box1.addEventListener('dragover',e=>{
+                    e.preventDefault();
+                    console.log('Drag Over');
+                });
+                box1.addEventListener('drop',e=>{
+                    console.log('Drop');
+                    box1.appendChild(dev1);
+                });
+
+                const box2 =document.querySelector('#box2');
+                box2.addEventListener('dragover',e=>{
+                    e.preventDefault();
+                    console.log('Drag Over');
+                });
+                box2.addEventListener('drop',e=>{
+                    console.log('Drop');
+                    box1.appendChild(dev1);
+                });
+
+            </script>
 
             <div id="tabla">
                 <table style="width: 650px;">
@@ -237,11 +282,6 @@
                     </tbody>                    
                 </table>          
             </div>
-
-            <div id="box1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-
-            
         </div> 
     </div>
 </body>
