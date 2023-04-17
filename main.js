@@ -10,24 +10,24 @@ function dado(){
     document.querySelector('.img1').setAttribute('src',fuente1);
     //document.querySelector('.img2').setAttribute('src',fuente2);
 }
-
+/*
 // lo que sucede cuando se arrastra un elemnto
-function drag(event){
+function drag(ev){
     //Guardar el id del elemto arrastrado
-    event.dataTrasnfer.setData("text",ev.target.id);
+    ev.dataTrasnfer.setData("text",ev.target.id);
 }
 
 //funcion evita que se abra como enlace cuando se suelta algun elemento
-function allowDrop(event){
+function allowDrop(ev){
     //permitir que se pueda soltar el elemento arrastrado
-    event.preventDefault();   
+    ev.preventDefault();   
 }
 
 
-function drop(event){
+function drop(ev){
+    ev.preventDefault();
     //obtener el id del elemento arrastrado
-    var data = event.dataTrasnfer.getData("text");
+    var data = ev.dataTrasnfer.getData("text");
     //Mover la imagen al contenedor del destino
-    arreglo[parseInt(ev.target.id)]=data;
-    event.target.appendChild(document.getElementById(data));
-}
+    ev.target.appendChild(document.getElementById(data));
+}*/

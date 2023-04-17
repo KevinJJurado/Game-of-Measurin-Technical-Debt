@@ -25,22 +25,22 @@
                 <img id="imagen-fondo" src="Tablero.PNG" width="1430" height="700">
             </div>
             <div id="deve_super6">
-                <img id="dev6" src="img/Developer6.PNG" width="75" height="67" draggable="true">
+                <img id="dev6" src="img/Developer6.PNG" width="45" height="37" draggable="true">
             </div>
             <div id="deve_super5">
-                <img id="dev5" src="img/Developer5.PNG" width="75" height="67" draggable="true">
+                <img id="dev5" src="img/Developer5.PNG" width="45" height="37" draggable="true">
             </div>
             <div id="deve_super4">
-                <img id="dev4" src="img/Developer4.PNG" width="75" height="67" draggable="true">
+                <img id="dev4" src="img/Developer4.PNG" width="45" height="37" draggable="true">
             </div>
             <div id="deve_super3">
-                <img id="dev3" src="img/Developer3.PNG" width="75" height="67" draggable="true">
+                <img id="dev3" src="img/Developer3.PNG" width="45" height="37" draggable="true">
             </div>
             <div id="deve_super2">
-                <img id="dev2" src="img/Developer2.PNG" width="75" height="67" draggable="true">
+                <img id="dev2" src="img/Developer2.PNG" width="45" height="37" draggable="true">
             </div>
             <div id="deve_super" >
-                <img id="dev1" src="img/Developer1.PNG" width="75" height="67" draggable="true">
+                <img id="dev1" src="img/Developer1.PNG" width="45" height="37" draggable="true">
             </div>
             <div id="imagen-superpuesta">
                 <button class="botonimgdado" onclick="dado()">
@@ -49,48 +49,199 @@
             </div>
             <div id="box1"></div>
             <div id="box2"></div>
-            <script>
-                
-                /*ondrop="drop(event)" ondragover="allowDrop(event)"*/
+            <div id="box3"></div>
+            <div id="box4"></div>
+            <div id="box5"></div>
+            <div id="box6"></div>
+            <div id="box7"></div>
+            <div id="box8"></div>
+            <div id="box9"></div>
+            <div id="box10"></div>
+            <div id="box11"></div>
+            <div id="box12"></div>
+            <div id="box13"></div>
+            <div id="box14"></div>
+            <div id="box15"></div>
+            <div id="box16"></div>
+            <div id="box17"></div>
+            <div id="box18"></div>
+            <div id="box19"></div>
+            <div id="box20"></div>
+            <div id="box21"></div>
+            <div id="box22"></div>
+            <div id="box23"></div>
+            <div id="box24"></div>
+            <div id="box25"></div>
 
-                const dev1 = document.querySelector('#dev1');
-                const dev2 = document.querySelector('#dev2');
-                /*dev1.addEventListener('dragstart',e=>{
-                    console.log('Drag Start');
-                });
-                dev1.addEventListener('dragend',e=>{
-                    console.log('Drag End');
-                });
-                dev1.addEventListener('drag',e=>{
-                    console.log('Drag');
-                });*/
+            <script>                
+                function dragAndDrop(elementId, containerId) {
+                    const element = document.querySelector(`#${elementId}`);
+                    const container = document.querySelector(`#${containerId}`);
 
-                const box1 = document.querySelector('#box1');                
-                /*box1.addEventListener('dragenter',e=>{
-                    console.log('Drag Enter');
-                });
-                box1.addEventListener('dragleave',e=>{
-                    console.log('Drag Leave');
-                });*/
-                box1.addEventListener('dragover',e=>{
-                    e.preventDefault();
-                    console.log('Drag Over');
-                });
-                box1.addEventListener('drop',e=>{
-                    console.log('Drop');
-                    box1.appendChild(dev1);
-                });
+                    element.addEventListener('dragstart', e => {
+                        e.dataTransfer.setData('text/plain', elementId);
+                    });
 
-                const box2 =document.querySelector('#box2');
-                box2.addEventListener('dragover',e=>{
-                    e.preventDefault();
-                    console.log('Drag Over');
-                });
-                box2.addEventListener('drop',e=>{
-                    console.log('Drop');
-                    box1.appendChild(dev1);
-                });
+                    container.addEventListener('dragover', e => {
+                        e.preventDefault();
+                    });
 
+                    container.addEventListener('drop', e => {
+                        const id = e.dataTransfer.getData('text');
+                        const draggedElement = document.querySelector(`#${id}`);
+                        container.appendChild(draggedElement);
+                    });
+                }
+                dragAndDrop("dev1","box1");
+                dragAndDrop("dev2","box1");
+                dragAndDrop("dev3","box1");
+                dragAndDrop("dev4","box1");
+                dragAndDrop("dev5","box1");
+                dragAndDrop("dev6","box1");
+                dragAndDrop("dev1","box2");
+                dragAndDrop("dev2","box2");
+                dragAndDrop("dev3","box2");
+                dragAndDrop("dev4","box2");
+                dragAndDrop("dev5","box2");
+                dragAndDrop("dev6","box2");
+                dragAndDrop("dev1","box3");
+                dragAndDrop("dev2","box3");
+                dragAndDrop("dev3","box3");
+                dragAndDrop("dev4","box3");
+                dragAndDrop("dev5","box3");
+                dragAndDrop("dev6","box3");
+                dragAndDrop("dev1","box4");
+                dragAndDrop("dev2","box4");
+                dragAndDrop("dev3","box4");
+                dragAndDrop("dev4","box4");
+                dragAndDrop("dev5","box4");
+                dragAndDrop("dev6","box4");
+                dragAndDrop("dev1","box5");
+                dragAndDrop("dev2","box5");
+                dragAndDrop("dev3","box5");
+                dragAndDrop("dev4","box5");
+                dragAndDrop("dev5","box5");
+                dragAndDrop("dev6","box5");
+                dragAndDrop("dev1","box6");
+                dragAndDrop("dev2","box6");
+                dragAndDrop("dev3","box6");
+                dragAndDrop("dev4","box6");
+                dragAndDrop("dev5","box6");
+                dragAndDrop("dev6","box6");
+                dragAndDrop("dev1","box7");
+                dragAndDrop("dev2","box7");
+                dragAndDrop("dev3","box7");
+                dragAndDrop("dev4","box7");
+                dragAndDrop("dev5","box7");
+                dragAndDrop("dev6","box7");
+                dragAndDrop("dev1","box8");
+                dragAndDrop("dev2","box8");
+                dragAndDrop("dev3","box8");
+                dragAndDrop("dev4","box8");
+                dragAndDrop("dev5","box8");
+                dragAndDrop("dev6","box8");
+                dragAndDrop("dev1","box9");
+                dragAndDrop("dev2","box9");
+                dragAndDrop("dev3","box9");
+                dragAndDrop("dev4","box9");
+                dragAndDrop("dev5","box9");
+                dragAndDrop("dev6","box9");
+                dragAndDrop("dev1","box10");
+                dragAndDrop("dev2","box10");
+                dragAndDrop("dev3","box10");
+                dragAndDrop("dev4","box10");
+                dragAndDrop("dev5","box10");
+                dragAndDrop("dev6","box10");
+                dragAndDrop("dev1","box11");
+                dragAndDrop("dev2","box11");
+                dragAndDrop("dev3","box11");
+                dragAndDrop("dev4","box11");
+                dragAndDrop("dev5","box11");
+                dragAndDrop("dev6","box11");
+                dragAndDrop("dev1","box12");
+                dragAndDrop("dev2","box12");
+                dragAndDrop("dev3","box12");
+                dragAndDrop("dev4","box12");
+                dragAndDrop("dev5","box12");
+                dragAndDrop("dev6","box12");
+                dragAndDrop("dev1","box13");
+                dragAndDrop("dev2","box13");
+                dragAndDrop("dev3","box13");
+                dragAndDrop("dev4","box13");
+                dragAndDrop("dev5","box13");
+                dragAndDrop("dev6","box13");
+                dragAndDrop("dev1","box14");
+                dragAndDrop("dev2","box14");
+                dragAndDrop("dev3","box14");
+                dragAndDrop("dev4","box14");
+                dragAndDrop("dev5","box14");
+                dragAndDrop("dev6","box14");
+                dragAndDrop("dev1","box15");
+                dragAndDrop("dev2","box15");
+                dragAndDrop("dev3","box15");
+                dragAndDrop("dev4","box15");
+                dragAndDrop("dev5","box15");
+                dragAndDrop("dev6","box15");
+                dragAndDrop("dev1","box16");
+                dragAndDrop("dev2","box16");
+                dragAndDrop("dev3","box16");
+                dragAndDrop("dev4","box16");
+                dragAndDrop("dev5","box16");
+                dragAndDrop("dev6","box16");
+                dragAndDrop("dev1","box17");
+                dragAndDrop("dev2","box17");
+                dragAndDrop("dev3","box17");
+                dragAndDrop("dev4","box17");
+                dragAndDrop("dev5","box17");
+                dragAndDrop("dev6","box17");
+                dragAndDrop("dev1","box18");
+                dragAndDrop("dev2","box18");
+                dragAndDrop("dev3","box18");
+                dragAndDrop("dev4","box18");
+                dragAndDrop("dev5","box18");
+                dragAndDrop("dev6","box18");
+                dragAndDrop("dev1","box19");
+                dragAndDrop("dev2","box19");
+                dragAndDrop("dev3","box19");
+                dragAndDrop("dev4","box19");
+                dragAndDrop("dev5","box19");
+                dragAndDrop("dev6","box19");
+                dragAndDrop("dev1","box20");
+                dragAndDrop("dev2","box20");
+                dragAndDrop("dev3","box20");
+                dragAndDrop("dev4","box20");
+                dragAndDrop("dev5","box20");
+                dragAndDrop("dev6","box20");
+                dragAndDrop("dev1","box21");
+                dragAndDrop("dev2","box21");
+                dragAndDrop("dev3","box21");
+                dragAndDrop("dev4","box21");
+                dragAndDrop("dev5","box21");
+                dragAndDrop("dev6","box21");
+                dragAndDrop("dev1","box22");
+                dragAndDrop("dev2","box22");
+                dragAndDrop("dev3","box22");
+                dragAndDrop("dev4","box22");
+                dragAndDrop("dev5","box22");
+                dragAndDrop("dev6","box22");
+                dragAndDrop("dev1","box23");
+                dragAndDrop("dev2","box23");
+                dragAndDrop("dev3","box23");
+                dragAndDrop("dev4","box23");
+                dragAndDrop("dev5","box23");
+                dragAndDrop("dev6","box23");
+                dragAndDrop("dev1","box24");
+                dragAndDrop("dev2","box24");
+                dragAndDrop("dev3","box24");
+                dragAndDrop("dev4","box24");
+                dragAndDrop("dev5","box24");
+                dragAndDrop("dev6","box24");
+                dragAndDrop("dev1","box25");
+                dragAndDrop("dev2","box25");
+                dragAndDrop("dev3","box25");
+                dragAndDrop("dev4","box25");
+                dragAndDrop("dev5","box25");
+                dragAndDrop("dev6","box25");
             </script>
 
             <div id="tabla">
