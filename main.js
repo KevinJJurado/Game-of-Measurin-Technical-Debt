@@ -8,26 +8,54 @@ function dado(){
     //var r= num+num2;
     //d.innerHTML = num;
     document.querySelector('.img1').setAttribute('src',fuente1);
-    //document.querySelector('.img2').setAttribute('src',fuente2);
-}
-/*
-// lo que sucede cuando se arrastra un elemnto
-function drag(ev){
-    //Guardar el id del elemto arrastrado
-    ev.dataTrasnfer.setData("text",ev.target.id);
 }
 
-//funcion evita que se abra como enlace cuando se suelta algun elemento
-function allowDrop(ev){
-    //permitir que se pueda soltar el elemento arrastrado
-    ev.preventDefault();   
+function mostrar(){
+    swal({
+        title:'¿Indicate which developer is refactoring?',
+        text:'Go to your keyboard and press, 1 for developer turn 1, 2 for developer turn 2, 3 for developer turn 3, 4 for developer turn 4, 5 for developer turn 5, 6 for developer developer turn 6.',
+        icon:'success',
+    });
 }
 
-
-function drop(ev){
-    ev.preventDefault();
-    //obtener el id del elemento arrastrado
-    var data = ev.dataTrasnfer.getData("text");
-    //Mover la imagen al contenedor del destino
-    ev.target.appendChild(document.getElementById(data));
-}*/
+function boton(){
+    mostrar();
+    var x = null;
+    var Fan_Out = null;
+    var Fan_In = null;
+    var Num_comp = null;
+    var Num_Ed = null;
+    var Num_Nod = null;
+    var Iden = null;
+    var Shd_Struc = null;
+    var Shd_Dat = null;
+    Tech_Debt = null;
+    document.addEventListener("keydown",function(e){
+        if(e.key === "1"){
+            x = 1;
+            console.log(x);
+            var fanO1 = document.getElementById("fanO1");
+            fanO1.innerHTML = 2;
+        }
+        if(e.key === "2"){
+            x=2;
+            console.log(x);
+        }
+        if(e.key === "3"){
+            x = 3;
+            console.log(x);
+        }
+        if(e.key === "4"){
+            x=4;
+            console.log(x);
+        }
+        if(e.key==="5"){
+            x=5;
+            console.log(x);
+        }
+        if(e.key==="6"){
+            x=6;
+            console.log(x);
+        }
+    });
+}
