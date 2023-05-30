@@ -90,7 +90,7 @@ function calculo(Fan_In,Fan_Out,Num_Comp,Num_Ed,Num_Nod,Shd_Struc,Shd_Pa){
             var Quality_inicial2 = cyclomatic_complexityI2 + Data_CouplingI2 + ModularityI2;
             var valores_Unidad_de_CalidadI=3;
             var EffortI2 = Quality_inicial2/valores_Unidad_de_CalidadI;
-            //console.log(EffortI2);
+            console.log(EffortI2);
 
             x=2;
             console.log(x);            
@@ -128,7 +128,6 @@ function calculo(Fan_In,Fan_Out,Num_Comp,Num_Ed,Num_Nod,Shd_Struc,Shd_Pa){
             var Tech_Debt2 = Quality_inicial2 - Qdeveloper2;
             var TD2 = document.getElementById("TD2");
             TD2.innerHTML = Tech_Debt2;
-            //console.log(Tech_Debt2);
         }
         if(e.key === "3"){
             var Fan_OutI3=7;
@@ -144,6 +143,7 @@ function calculo(Fan_In,Fan_Out,Num_Comp,Num_Ed,Num_Nod,Shd_Struc,Shd_Pa){
             var Quality_inicial3 = cyclomatic_complexityI3 + Data_CouplingI3 + ModularityI3;
             var valores_Unidad_de_CalidadI3=3;
             var EffortI3 = Quality_inicial3/valores_Unidad_de_CalidadI3;
+            console.log(EffortI3);
 
             x = 3;
             console.log(x);
@@ -181,7 +181,6 @@ function calculo(Fan_In,Fan_Out,Num_Comp,Num_Ed,Num_Nod,Shd_Struc,Shd_Pa){
             var Tech_Debt3 = Quality_inicial3 - Qdeveloper3;
             var TD3 = document.getElementById("TD3");
             TD3.innerHTML = Tech_Debt3;
-            //console.log(Tech_Debt3);
         }
         if(e.key === "4"){
             var Fan_OutI4=1;
@@ -197,6 +196,7 @@ function calculo(Fan_In,Fan_Out,Num_Comp,Num_Ed,Num_Nod,Shd_Struc,Shd_Pa){
             var Quality_inicial4 = cyclomatic_complexityI4 + Data_CouplingI4 + ModularityI4;
             var valores_Unidad_de_CalidadI4=3;
             var EffortI4 = Quality_inicial4/valores_Unidad_de_CalidadI4;
+            console.log(EffortI4);
 
             x=4;
             console.log(x);
@@ -250,6 +250,7 @@ function calculo(Fan_In,Fan_Out,Num_Comp,Num_Ed,Num_Nod,Shd_Struc,Shd_Pa){
             var Quality_inicial5 = cyclomatic_complexityI5 + Data_CouplingI5 + ModularityI5;
             var valores_Unidad_de_CalidadI5=3;
             var EffortI5 = Quality_inicial5/valores_Unidad_de_CalidadI5;
+            console.log(EffortI5);
             
             x=5;
             console.log(x);
@@ -303,6 +304,7 @@ function calculo(Fan_In,Fan_Out,Num_Comp,Num_Ed,Num_Nod,Shd_Struc,Shd_Pa){
             var Quality_inicial6 = cyclomatic_complexityI6 + Data_CouplingI6 + ModularityI6;
             var valores_Unidad_de_CalidadI6=3;
             var EffortI6 = Quality_inicial6/valores_Unidad_de_CalidadI6;
+            console.log(EffortI6);
 
             x=6;
             console.log(x);
