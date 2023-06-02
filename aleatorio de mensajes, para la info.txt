@@ -1,0 +1,7 @@
+aleatorio de mensajes, para la informacion, para dar informacion de refactorizar el codigo, explicacion del juego, se 
+
+Developer a iteration
+
+para hacer cambios preciona la tecla correspondiente al desarrollador
+
+algun cambio que hiciste afecto los parametros de otro desarrollador
